@@ -1,0 +1,40 @@
+//  CREATE
+//INPUT
+//OUTPUT
+//UPDATE
+//dataType arrayName[] = new dataType[size];
+//eg- int marks[] = new int [40];
+//eg2- int numbers[] = {1,2,3};
+//eg3- int moreNumbers [] = {3,5,8};
+//eg4- String fruits[] = {"apple","mango"};
+
+
+
+import java.util.*;
+
+public class Arrays{
+public static void main(String args[]){
+    int marks[] = new int[50];
+     
+    Scanner sc = new Scanner(System.in);//for user input
+
+    //int phy
+    //phy = sc.nextInt();
+    marks[0] = sc.nextInt();
+    marks[1] = sc.nextInt();
+    marks[2] = sc.nextInt();
+   
+    System.out.println("Phy : " + marks[0]);
+    System.out.println("Chem : " + marks[1]);
+    System.out.println("Math : " + marks[2]);
+    marks[2] =100;//update //marks[2] + 3;
+    System.out.println("Math : " + marks[2]);
+
+
+
+
+    //percentage
+    int percentage = (marks[0] + marks[1] + marks[2]) / 3;
+    System.out.println("percentage = " + percentage + "%");
+}
+}
