@@ -166,21 +166,44 @@ public class Arrays{
 
 
 // **********************PAIRS IN A ARRAY*************************
-public static void printPairs(int numbers[]){
-    int tp = 0;
+// public static void printPairs(int numbers[]){
+//     int tp = 0;
+//     for(int i=0; i<numbers.length; i++){
+//         int curr = numbers[i]; //2,4,6,8,10
+//         for(int j=i+1; j<numbers.length; j++){
+//             System.out.print("(" + curr + "," + numbers[j] + ") ");//first pair print 1 st no. current 2nd numbers of j, current same but no. change
+//             tp++;
+//         }
+//         System.out.println();
+//     }
+// System.out.println("total pairs:" + tp);
+
+// }
+// public static void main(String args[]){
+//     int numbers[] = {2, 4, 6, 8, 10};
+//     printPairs(numbers);
+// }
+// }
+
+
+
+
+// **********************PRINT SUBARRAY****************
+public static void printSubarray(int numbers[]){
     for(int i=0; i<numbers.length; i++){
-        int curr = numbers[i]; //2,4,6,8,10
-        for(int j=i+1; j<numbers.length; j++){
-            System.out.print("(" + curr + "," + numbers[j] + ") ");//first pair print 1 st no. current 2nd numbers of j, current same but no. change
-            tp++;
+        int start = i;
+        for(int j=i+1; j<numbers.length; j++ ){
+            int end = j;
+            for(int k=start; k<=end; k++){
+                System.out.print(numbers[k]+" ");
+            }
+            System.out.println();
         }
         System.out.println();
     }
-System.out.println("total pairs:" + tp);
-
 }
 public static void main(String args[]){
-    int numbers[] = {2, 4, 6, 8, 10};
-    printPairs(numbers);
+       int numbers[] = {2, 4, 6, 8, 10};
+        printSubarray(numbers);
 }
 }
